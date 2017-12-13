@@ -1,0 +1,5 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/UserMasterPage.Master" AutoEventWireup="true" CodeBehind="class_shedule.aspx.cs" Inherits="WebProject.class_shedule" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="Web_Body" runat="server">
+
+
+</asp:Content>

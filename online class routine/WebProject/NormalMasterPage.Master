@@ -1,0 +1,181 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="NormalMasterPage.master.cs" Inherits="WebProject.NormalMasterPage" %>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+
+    <style>
+        body{
+            background-color:lightblue;
+        }
+
+        
+
+        #navibar{
+            background-color:#F5F5DC;
+            
+            
+        }
+        #navibar li {
+            margin :10px;
+            padding:0px;
+            text-align:right;
+            display:inline;
+
+        }
+        .Table {
+            font-size: 22px;
+            width: 950px;
+            height: 350px;
+            margin: 10px 10px 10px 10px;
+            border: 4px solid #E3E3E3;
+            border-radius: 10px;
+            moz-border-radius: 10px;
+        }
+
+        .Reg_Table{
+            font-size: 22px;
+            width: 950px;
+            height: 350px;
+            
+            
+        }
+        #navibar li a{
+            text-decoration:none;
+            font-size:22px;
+            color:black;
+            
+        }
+
+        #navibar a:link, #navibar a:active, #navibar a:visited
+        {
+           
+           color: Black;
+           
+        }
+
+        #navibar a:hover
+        {
+         color: lightblue;
+         text-decoration:double;
+        }
+        .left{
+            text-align:right;
+            margin-top:-32px ;
+            
+        }
+        .left ul li a{
+            
+        }
+        #sidebar{
+            float:right;
+            width:175px;
+            height:400px;
+            margin:20px 10px 20px 10px;
+            border:3px solid #E3E3E3;
+        }
+
+        #content_area
+        {
+         float: left;
+         width: 850px;
+         margin: 20px 0 20px 0;
+         padding: 10px;
+        }
+
+        .imgLeft
+        {
+            float: left;
+            width: 250px;
+            height: 180px;
+            margin: 0px 10px 10px 0;
+            padding: 10px;
+        }
+
+        .imgRight
+        {
+            float: right;
+            width: 250px;
+            height: 270px;
+            margin: 0px 0 10px 10px;
+            padding: 10px;
+        }
+
+        .class_shedule_day{
+            border:3px solid #E3E3E3;
+        }
+
+        #footer{
+            clear: both;
+        }
+
+        .reg_from_table a {
+            text-decoration:none;
+            font-size:24px;
+            border:2px solid Black;
+            padding:10px;    
+            border-radius:10%;
+            background-color:#CCCCCC;
+            color:#2E64FE;
+        }
+        .auto-style1 {
+            float: left;
+            width: 139px;
+            height: 33px;
+            margin: 0px 10px 10px 0;
+            padding: 10px;
+        }
+    </style>
+
+</head>
+<body>
+     
+    <form id="form1" runat="server">
+        <div id="logo">
+            <img  runat="server" src="~/Images/diulogo.png" class="auto-style1" />
+        </div>
+    <div id="navibar">
+
+        
+            
+        
+        
+       <ul>
+        <li><a href="~/Home.aspx" runat="server"> Home </a></li>
+        <!--<li><asp:Button ID="profile" runat="server" Text="Profile" BorderStyle="None" Font-Bold="True" Font-Size="15px" Height="32px" /></li>-->
+        <li><a href="#" runat="server"> Result </a></li>
+        <li><a href="~/ClassShedule.aspx" runat="server"> Class Shedule</a></li>
+        <li>
+            <asp:TextBox ID="search_textbox" placeholder="search by day" runat="server" Width="391px" Height="23px" style="margin-left: 76px; margin-top: 0px"></asp:TextBox>
+            
+        </li>
+        <li><asp:Button ID="search_button" runat="server" Text="Search" Width="86px" BorderStyle="Solid" BorderWidth="2px" Font-Bold="True" Font-Size="15px" Height="32px" BorderColor="Black" OnClick="search_button_Click" /></li>
+           </ul>
+        <div class="left">
+            <ul>
+                <li><a href="~/Login.aspx" runat="server">Singin</a></li>
+            <li><a href="~/RegistrationFrom.aspx" runat="server">Register</a></li>
+            </ul>
+            
+        </div>
+    </div>
+        
+        <div id="content_area">
+
+            <asp:ContentPlaceHolder ID="Web_Body" runat="server"></asp:ContentPlaceHolder>
+
+        </div>
+
+        <div id="sidebar">
+
+        </div>
+
+    <div id="footer">
+        <h5 style  ="text-align:center">DIU Class Shedule created by Sayeed</h5>
+    </div>
+   
+    </form>
+   
+</body>
+</html>
